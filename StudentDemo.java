@@ -6,9 +6,9 @@ public class StudentDemo
 	{
 		int choice;
 		int num_of_Students;
-		Scanner myObj=new Scanner(System.in);
+		Scanner obj=new Scanner(System.in);
 		System.out.print("Enter the Number of Students:  ");
-		num_of_Students=myObj.nextInt();
+		num_of_Students=obj.nextInt();
 		Student S[]=new Student[num_of_Students];
 		for(int i=0;i<num_of_Students;i++)
 		{
@@ -17,17 +17,15 @@ public class StudentDemo
 			   System.out.println("Enter 1 If You Are A Dayscholar");
 			   System.out.println("Enter 2 If You Are A Hostellite");
 			   System.out.println("Enter 3 To Exit");
-			   choice=myObj.nextInt();
+			   choice=obj.nextInt();
 			   if(choice==1)
 			   {
-				   Dayscholars D=new Dayscholars();
-				   S[i]=D;
+				   S[i]=new Dayscholars();
 				   S[i].setdata();
 			   }
 			   else if(choice==2)
 			   { 
-				   Hostellite H=new Hostellite();
-					   S[i]=H;
+					   S[i]=new Hostellite();
 					   S[i].setdata();
 			   }
 			   else
